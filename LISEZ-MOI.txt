@@ -1,0 +1,46 @@
+ZEPLUG — application personnelle pour iPhone
+
+Cette application SwiftUI affiche l'espace client officiel https://customer.zeplug.com/
+dans une vue WebKit. Connectez-vous sur le site, choisissez votre borne et utilisez
+les commandes Mode éco / Mode continu proposées par votre opérateur.
+
+Le changement de mode est effectué par le site de l'opérateur. Aucun bouton natif
+ne simule un changement de mode. Cette application n'est pas éditée par Zeplug.
+Les identifiants ne sont ni lus ni enregistrés par le code de l'application.
+La session et les cookies sont gérés localement par WebKit et peuvent expirer.
+La compatibilité de la connexion avec la vue intégrée reste à vérifier sur iPhone.
+Si le fournisseur bloque cette connexion, ouvrir son espace client directement dans Safari.
+
+INSTALLATION SUR VOTRE IPHONE
+1. Ouvrir MaRecharge.xcodeproj avec Xcode sur le Mac.
+2. Sélectionner le projet, puis la cible MaRecharge, Signing & Capabilities.
+3. Choisir votre équipe Apple personnelle (ajouter votre compte Apple dans Xcode
+   > Settings > Accounts si nécessaire). Adapter le Bundle Identifier s'il est pris.
+4. Brancher l'iPhone, accepter la relation de confiance et sélectionner l'iPhone
+   comme destination. Activer le mode développeur si iOS le demande.
+5. Cliquer sur Run. La signature et la durée d'installation dépendent du compte Apple.
+
+PRÉREQUIS ET LIMITES
+- iOS 17 ou version ultérieure.
+- Connexion Internet et compte client compatible avec l'espace web.
+- Aucun secret, identifiant client ou contrat personnel intégré au projet.
+- Pas d'API Zeplug privée inventée ni de contournement de l'authentification.
+- Pas de widget, d'automatisation en arrière-plan ni de boutons natifs éco/continu.
+  Ces fonctions nécessitent d'abord de vérifier une interface de pilotage autorisée.
+- Aucune commande de recharge n'a été envoyée pendant le développement.
+- Le fournisseur annonce une migration de Zeplug vers Tohmo : les redirections
+  HTTPS sont acceptées, mais le parcours de connexion doit être testé sur le compte.
+
+VALIDATION
+Icône adaptée du logo vectoriel https://customer.zeplug.com/logos/zeplug/logo-desktop.svg
+Nom affiché : ZePlug. Le projet technique et son identifiant restent MaRecharge
+pour permettre la mise à jour de l'application déjà installée.
+
+Consulter VALIDATION.txt pour le résultat de compilation et les limites des tests.
+
+Version 0.2.1, build 3 : suppression du bouton retour, du menu Options et du bouclier en bas.
+
+Version 0.2.2, build 4 : réouverture de la dernière page de borne Zeplug et compilation Release optimisée.
+La route est mémorisée après ouverture de la borne ; les ouvertures suivantes en bénéficient.
+Les durées WebKit sont consignées localement sans URL ni identifiant dans la catégorie Loading.
+Le chargement complet du site reste dépendant du service distant et du réseau.

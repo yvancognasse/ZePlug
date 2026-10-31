@@ -1,0 +1,18 @@
+ZePlug 0.2.2, build 4 — 28 octobre 2026
+
+Compilation Release signée pour iPhone 16 physique : RÉUSSIE.
+Installation sur l'iPhone : RÉUSSIE.
+
+Optimisation : mémorisation de la route /contracts/<UUID> après navigation,
+puis chargement direct de cette route au démarrage suivant. Uniquement le domaine
+Zeplug en HTTPS ; aucun paramètre de requête ni jeton d'authentification mémorisé.
+La route mémorisée est effacée après arrivée sur la page /login.
+Cache WebKit et cookies persistants préexistants conservés sans changement.
+Durées entre début de navigation, commit et fin consignées localement (OSLog),
+sans URL ni contenu personnel. Ces durées ne mesurent pas la disponibilité des
+commandes d'une application web après hydratation JavaScript.
+
+Mesure de la page d'entrée depuis le Mac : ~0,17 s, sans exécution JavaScript.
+Aucune mesure comparative du chargement complet sur iPhone effectuée : le gain
+réel dépend du parcours web, du réseau, de la session et du service distant.
+Aucune commande de recharge envoyée.
