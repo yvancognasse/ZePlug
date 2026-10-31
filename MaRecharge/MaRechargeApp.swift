@@ -140,6 +140,14 @@ final class ChargingBrowser: NSObject, ObservableObject, WKNavigationDelegate, W
         showError(error)
     }
 
+    func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
+        // Never reload automatically: the page may have been submitting a charging command.
+        isLoading = false
+        progress = 0
+        navigationStartedAt = nil
+        errorMessage = "L'espace client a été interrompu. Touchez Réessayer pour le recharger, puis vérifiez l'état de votre borne avant de renvoyer une commande."
+    }
+
     private func showError(_ error: Error) {
         guard (error as NSError).code != NSURLErrorCancelled else { return }
         errorMessage = "Impossible de charger votre espace client. Vérifiez votre connexion Internet, puis réessayez."

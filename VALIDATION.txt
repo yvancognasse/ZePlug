@@ -1,3 +1,9 @@
+ZePlug 0.2.3, build 5 — 1 novembre 2026
+
+Gestion de l'arrêt du processus WebKit : message explicite et bouton Réessayer, sans rechargement ni commande automatiques. Compilation iPhone Release sans signature : RÉUSSIE avec Xcode 27.1. Le bundle 0.2.3 (5) a été vérifié dans un dossier de compilation temporaire ; il n'a pas été installé sur l'iPhone. Aucun essai de terminaison WebKit sur iPhone ni commande de recharge effectué.
+
+Validation de la version précédente :
+
 ZePlug 0.2.2, build 4 — 28 octobre 2026
 
 Compilation Release signée pour iPhone 16 physique : RÉUSSIE.

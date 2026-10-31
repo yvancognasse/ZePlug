@@ -44,3 +44,5 @@ Version 0.2.2, build 4 : réouverture de la dernière page de borne Zeplug et co
 La route est mémorisée après ouverture de la borne ; les ouvertures suivantes en bénéficient.
 Les durées WebKit sont consignées localement sans URL ni identifiant dans la catégorie Loading.
 Le chargement complet du site reste dépendant du service distant et du réseau.
+
+Version 0.2.3, build 5 : si iOS interrompt le processus WebKit, un message permet de recharger volontairement la page avec Réessayer. Aucune commande ni recharge de page n'est relancée automatiquement. Vérifier l'état de la borne après reconnexion avant de renvoyer une commande.
